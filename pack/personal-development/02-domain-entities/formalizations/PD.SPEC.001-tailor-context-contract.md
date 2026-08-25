@@ -9,13 +9,14 @@ wp: WP-149 (Блок А)
 related:
   consumed_by: [MIM.SOP.001]
   realized_by: [WP-151, WP-222, WP-245]
-  upstream: [SA.CAT.001, PD.CAT.002, PD.CAT.003, PD.FORM.003, PD.FORM.081]
+  upstream: [SA.CAT.001, MIM.M.004, MIM.WP.003, PD.CAT.002, PD.CAT.003, PD.FORM.003, PD.FORM.081, PD.FORM.131]
   applies_distinctions: ["HD #27 Персона/Память/Контекст", "HD #49 MCP-сервис ≠ Роль"]
 summary: >
-  Спецификация формата входных данных Портного (R27 в DP.ROLE.001): какие поля
-  читаются из Персоны, Памяти и текущей работы, в каком формате, какое поведение
-  при отсутствии данных. Контракт поддерживает выбор развивающего шага внутри
-  реального РП, проекта или рабочего продукта; отдельное занятие — частный случай.
+  Спецификация входа и наблюдаемого выхода Портного (R27 в DP.ROLE.001): какие
+  поля читаются из Персоны, Памяти и текущей работы, что использовано в решении,
+  какой метод или невмешательство выбраны и какие изменения подтверждены.
+  Контракт поддерживает выбор развивающего вмешательства внутри реального РП,
+  проекта или рабочего продукта; отдельное сопровождение — частный носитель.
   Контракт = объект-формат (это часть Pack — что существует). Способ доставки
   (psycopg2 directly / MCP tool) — деталь реализации носителя роли (WP-222).
 ---
@@ -30,10 +31,10 @@ summary: >
 
 ## 1. Назначение
 
-Этот документ отвечает на вопрос: **какой минимально необходимый формат данных получает Портной перед встраиванием развивающего шага в текущую работу?** Персональное руководство или отдельное занятие — лишь один из возможных носителей такого шага.
+Этот документ отвечает на два вопроса: **какой минимально необходимый формат данных получает Портной перед развивающим вмешательством в текущую работу и какой наблюдаемый объект он возвращает после решения?** Персональное руководство — лишь один из возможных носителей такого вмешательства.
 
-SOP.001 описывает алгоритм («как»). Этот файл описывает вход («что»).
-Контракт = объект-формат (поля, типы, fallback). Способ получения (текущий: psycopg2 → Neon `indicators` directly; будущий: MCP tool через Gateway) — деталь реализации носителя, не часть контракта.
+SOP.001 описывает алгоритм («как»). Этот файл описывает вход и выход («что»).
+Контракт = объекты-форматы (поля, типы, fallback и свидетельства). Способ получения и сохранения (текущий: psycopg2 → Neon `indicators` directly; будущий: MCP tool через Gateway) — деталь реализации носителя, не часть контракта.
 
 **Принцип роль ≠ исполнитель** (FPF, distinctions.md):
 - Роль R27 «Портной» определена в `DP.ROLE.001` (PACK-digital-platform) — переносима между носителями.
@@ -49,6 +50,19 @@ SOP.001 описывает алгоритм («как»). Этот файл оп
 tailor_context:
   schema_version: 2         # int. v2 добавляет развитие внутри текущей работы
 
+  # ── Разрешение на персональный профиль ──────────────────────────────────
+  # Охватывает любые персональные поля v2: профиль, goals/dissatisfactions,
+  # qualification_mim, state_axes, историю и derived-оценки. Текущий рабочий
+  # продукт, прямо переданный для задачи, остаётся task-context.
+  profile_consent:
+    status: "granted"       # granted | absent | withdrawn
+    scope: "current_work"   # str
+    permitted_field_paths:  # list[str]. Только явно разрешённые пути
+      - "personal_inputs.goals[0]"
+      - "qualification_mim"
+      - "state_axes.mastery"
+    evidence_ref: "<profile-consent-evidence-ref>" # str
+
   # ── Профиль (L1 declarative, самооценка) ──────────────────────────────────
   student_stage: 1          # int 0–4. Ступень ученика (PD.FORM.003)
   it_level: 1               # int 0–3. ИТ-уровень (SOP.001 §Scaffolding)
@@ -62,21 +76,22 @@ tailor_context:
   # Передаётся только срез, релевантный текущей работе. Отсутствие поля = omit,
   # а не разрешение Портному вывести личный факт или подставить его самому.
   personal_inputs:          # dict | null. Опционально
-    consent_scope: "current_work"  # str. На что дано согласие в этой сессии
     goals:                  # list[dict]. Только выбранные пользователем цели
-      - ref: "GOAL-NNN"     # str | null. Ссылка на декларацию Персоны
+      - ref: "<goal-declaration-ref>" # str | null. Ссылка на декларацию Персоны
         statement: "Желаемое изменение"  # str. Минимальный нужный фрагмент
     dissatisfactions:       # list[dict]. Разрывы «сейчас → желаемое»
-      - ref: "DISS-NNN"     # str | null
+      - ref: "<dissatisfaction-declaration-ref>" # str | null
         statement: "Что не устраивает сейчас"  # str
 
   # ── Квалификация МИМ (отдельно от ступени и состояний) ───────────────────
   qualification_mim:       # dict | null. Снимок по канонической модели МИМ
-    model_ref: "MIM.M.004" # str. Модель квалификации; не заменяется student_stage
+    measurement_type_ref: "MIM.WP.003" # str. Канонический тип замера
+    measurement_ref: "<repository/path-or-record-id>" # str. Ссылка на экземпляр замера
+    model_ref: "MIM.M.004" # str. Метод трёх шкал; не заменяется student_stage
     dimensions:            # dict. Ключи задаёт upstream-модель, не этот контракт
       "dimension-id":
         level: null         # str | int | null
-        source: null        # str | null. memory_derived | persona_self_assessment
+        source: null        # str | null. Роль или система, выпустившая замер
         as_of: null         # str YYYY-MM-DD | null
 
   # ── Шесть независимых состояний пользователя ─────────────────────────────
@@ -164,6 +179,89 @@ tailor_context:
 
 ---
 
+## 2а. Формат выходного объекта `tailor_outcome`
+
+`tailor_outcome` фиксирует решение Портного и наблюдаемые последствия без копирования личных значений из входного контекста. Группы результата соответствуют четырём наблюдаемым дельтам [PD.FORM.131](./PD.FORM.131-cyberhuman.md): рабочему продукту, человеку, IWE и их совместной способности.
+
+```yaml
+tailor_outcome:
+  schema_version: 1
+  decision: "intervention"       # intervention | no_intervention
+  method_ref: "<MIM.M.NNN>"      # str | null. Существующий метод; null при no_intervention
+  reason:
+    code: "qualification_measure_relevant_to_current_work" # str
+    qualification_measure_ref: "<same-as-input-measurement-ref>" # str | null
+    qualification_field_path: "qualification_mim.dimensions.agency" # str | null
+    work_requirement_ref: "strategy_inputs.current_work_product.desired_change" # str
+    state_axes_used: ["mastery"]                         # list[str]. Только известные готовые оси
+    state_axes_registry:
+      ref: "DS-my-strategy/docs/state-axes-registry.yaml"
+      revision_ref: "git:<sha-or-tag>"                   # str. Проверенная ревизия SoT
+
+  context_usage:
+    consent_scope: "current_work"                        # str | null
+    consent_status: "granted"                            # granted | absent | withdrawn
+    consent_ref: "<profile-consent-evidence-ref>"        # str | null
+    field_paths_used:                                    # list[str]. Пути полей, не личные значения
+      - "strategy_inputs.current_work_product"
+      - "qualification_mim.dimensions.dimension-id"
+      - "personal_inputs.goals[0]"
+    personal_updates:
+      accepted_refs: []                                  # list[str]. Ссылки на принятые записи, не значения
+      acceptance_ref: null                               # str | null. Свидетельство принятия пользователем
+
+  work_product_delta:                                    # dict | null
+    work_product_ref: "<work-product-ref>"
+    criterion: "Заранее объявленный наблюдаемый критерий"
+    before_ref: "<before-evidence-ref>"
+    after_ref: "<after-evidence-ref>"
+    criterion_result: "pass"                             # pass | fail | not_checked
+
+  iwe_delta:                                             # dict | null
+    change_ref: "<accepted-iwe-change-ref>"
+    accepted_by_user: true                               # bool
+    persisted_at: "2026-08-25T00:00:00Z"                 # ISO-8601 | null
+    reused_in_session_ref: "<later-session-ref>"         # str | null
+
+  human_transfer:                                        # dict | null
+    changed_task_ref: "<changed-task-ref>"
+    changed_dimension: "Другой объект или существенное ограничение"
+    method_explained_before_new_prompt: true              # bool
+    applied_without_reteaching: true                     # bool. Метод не объяснялся повторно
+    explanation_evidence_ref: "<changed-task-explanation-ref>"
+    result_evidence_ref: "<changed-task-result-ref>"
+    evaluated_by_ref: "<evaluator-ref>"
+    result: "confirmed"                                  # confirmed | proxy | failed | not_checked
+
+  joint_capability:                                      # dict | null
+    baseline_ref: "<joint-capability-baseline-ref>"
+    result_ref: "<joint-capability-result-ref>"
+    criterion_result: "pass"                             # pass | fail | not_checked
+
+  evidence_refs:                                         # list[str]
+    - "<work-product-diff-ref>"
+    - "<iwe-reuse-ref>"
+    - "<changed-task-explanation-ref>"
+    - "<changed-task-result-ref>"
+    - "<joint-capability-baseline-ref>"
+    - "<joint-capability-result-ref>"
+```
+
+Значения вида `<...-ref>` — непрозрачные ссылки на уже существующие записи или артефакты носителя. Контракт не задаёт им новый namespace и не создаёт фиктивные РП, задачи, роли или схемы URI.
+
+**Инварианты выхода:**
+
+- `decision: no_intervention` — валидный результат; `method_ref`, `work_product_delta`, `iwe_delta`, `human_transfer` и `joint_capability` могут быть `null`, но `reason` и `context_usage` обязательны.
+- Для `intervention` основание квалификационного выбора прослеживается до существующего экземпляра `MIM.WP.003`: `qualification_measure_ref` совпадает с входным `measurement_ref`, `qualification_field_path` указывает на непустое измерение с `source` и `as_of`, а `work_requirement_ref` — на наблюдаемое требование текущей работы. Отдельный выдуманный идентификатор разрыва не создаётся.
+- `field_paths_used` содержит только пути полей. Личные значения и новые выводы о человеке в `tailor_outcome` не копируются. Каждый использованный персональный путь v2 — из профиля, `personal_inputs`, `qualification_mim`, `state_axes`, истории или derived-оценок — входит в `profile_consent.permitted_field_paths`, а `consent_ref` совпадает с входным `profile_consent.evidence_ref`. Непустой `personal_updates.accepted_refs` допустим только при `consent_status: granted` и непустом `acceptance_ref`; сами значения хранятся вне выхода.
+- При `profile_consent.status: absent|withdrawn` все персональные поля v2 игнорируются: `personal_inputs` опускается, `qualification_mim` равен `null`, оси остаются неизвестными, а профиль, история и derived-оценки не входят в `field_paths_used`/`state_axes_used`. Портной может работать только с текущим рабочим продуктом, прямо переданным в задаче, без персонального вывода. Legacy v1 fallback не является разрешением использовать эти поля в режиме «работа → развитие».
+- `state_axes_used` содержит только оси с `gate_ready: true` в ревизии, указанной в `state_axes_registry`. Единственный источник готовности — `DS-my-strategy/docs/state-axes-registry.yaml` (WP-457); `community` и `mentorship` не используются, пока в этой ревизии у них `gate_ready: false`.
+- При `iwe_delta.accepted_by_user: false` поля `persisted_at` и `reused_in_session_ref` обязаны быть `null`. Положительный результат изменения IWE засчитывается только при `accepted_by_user: true`, непустом `persisted_at` и непустом `reused_in_session_ref`.
+- `human_transfer.result: confirmed` допустим, только если изменена задача, человек объяснил метод до новой подсказки и применил его без повторного объяснения; все три утверждения подтверждены `changed_task_ref`, `explanation_evidence_ref`, `result_evidence_ref` и `evaluated_by_ref`. Голые булевы поля и `proxy` — диагностический след, а не подтверждённое изменение человека.
+- Положительный результат `intervention` и отрицательные результаты `no_intervention` / `consent_status: absent|withdrawn` — разные свидетельства и не заменяют друг друга.
+
+---
+
 ## 3. Правила fallback
 
 | Поле | Условие | Fallback |
@@ -182,6 +280,7 @@ tailor_context:
 | `worldview_gaps` | L3 не вычислен | `[]` — Портной сам фильтрует CAT.001 по фазе |
 | `mastery_gaps` | L3 не вычислен | `[]` — Портной сам фильтрует CAT.002+CAT.003 по фазе |
 | `domain` | Нет в профиле | `null` (Портной не адаптирует примеры по домену) |
+| `profile_consent` | Нет явного разрешения или оно отозвано | `{status: absent|withdrawn, permitted_field_paths: [], evidence_ref: null}`; персональные поля ниже не используются |
 | `personal_inputs` | Нет согласия или релевантных деклараций | omit. Не выводить цели или неудовлетворённости из поведения |
 | `qualification_mim` | Нет снимка с provenance | `null`. Не заменять `student_stage` или общей оценкой |
 | `state_axes.*` | Ось неизвестна или не готова к исполнимому выбору | `{state_id: null, source: null, as_of: null}`. Не подставлять legacy `state` |
@@ -225,9 +324,11 @@ tailor_context:
 
 ### 4.1. Минимум для развития внутри реальной работы (v2)
 
-Для режима «работа → развитие» одного учебного профиля недостаточно. Контракт должен содержать `schema_version: 2`, явный `personal_inputs.consent_scope` и `strategy_inputs.current_work_product.desired_change`. `qualification_mim` и каждая из `state_axes` могут быть `null`, но обязаны сохранять семантику «неизвестно», а не получать универсальный fallback.
+Для режима «работа → развитие» одного профиля недостаточно. Контракт должен содержать `schema_version: 2` и `strategy_inputs.current_work_product.desired_change`. Любое использование персонального поля v2 требует `profile_consent.status: granted`, непустого `evidence_ref` и явного пути в `permitted_field_paths`. При отсутствии или отзыве разрешения все персональные поля игнорируются, а `tailor_outcome.context_usage.consent_status` фиксирует `absent` или `withdrawn`; доступен только прямо переданный task-context. Неизвестные персональные поля не получают универсальный fallback.
 
-Если текущая работа известна, а личный контекст не разрешён, Портной может помочь с рабочим продуктом без персонального вывода. Если развивающий шаг не улучшает текущую работу, корректный результат выбора — `no_intervention`.
+Если текущая работа известна, а личный контекст не разрешён, Портной может помочь с рабочим продуктом без персонального вывода. Если развивающее вмешательство не улучшает текущую работу, корректный результат выбора — `no_intervention`.
+
+Каждое решение режима «работа → развитие» возвращает `tailor_outcome` из §2а. Минимум выхода: `decision`, `reason`, `context_usage.field_paths_used`, `context_usage.consent_status` и `evidence_refs`. Для `intervention` дополнительно обязательны `method_ref`, `work_product_delta` и `iwe_delta`; `human_transfer` и `joint_capability` заполняются при наличии отдельной проверки на изменённой задаче.
 
 ---
 
@@ -288,8 +389,10 @@ tailor_context:
 - При отсутствии поля — применяет fallback из §3
 - Атомарен: контракт выдаётся за одну операцию (для текущего носителя — один SQL-набор; для будущего — один проход tool-calls)
 - Версионирован: `schema_version: 2` в payload; носитель, понимающий только v1, игнорирует новые опциональные поля
-- Минимизирует личные данные: передаёт только поля в `consent_scope`, релевантные `current_work_product`
+- Минимизирует личные данные: передаёт из персонального профиля только пути, перечисленные в `profile_consent.permitted_field_paths` и релевантные `current_work_product`
 - Сохраняет provenance: квалификация и состояния без `source`/`as_of` считаются неизвестными
+- Возвращает `tailor_outcome` для каждого решения и сохраняет только принятое пользователем `iwe_delta`
+- Не повышает `human_transfer.result` от `proxy` до `confirmed` без наблюдаемых условий §2а
 
 ---
 
@@ -324,9 +427,11 @@ tailor_context:
 | Шаг | Поля контракта |
 |-----|---------------|
 | Уточнить наблюдаемый рабочий результат | `strategy_inputs.current_work_product`, `strategy_inputs.active_wp`, `strategy_inputs.projects` |
-| Ограничить разрешённый личный контекст | `personal_inputs.consent_scope`, `personal_inputs.goals`, `personal_inputs.dissatisfactions` |
-| Выбрать ближайший полезный разрыв | `qualification_mim`, `state_axes`, `worldview_gaps`, `mastery_gaps` |
+| Ограничить разрешённый персональный профиль | `profile_consent`, затем только перечисленные в нём пути из профиля, `personal_inputs`, `qualification_mim`, `state_axes`, истории и derived-оценок |
+| Выбрать ближайшее полезное несоответствие | `qualification_mim`, требование из `strategy_inputs.current_work_product`, разрешённые `state_axes`, `worldview_gaps`, `mastery_gaps` |
 | Встроить метод либо не вмешиваться | Все поля выше; допустимый выбор `no_intervention` |
+| Зафиксировать решение и последствия | `tailor_outcome.decision`, `reason`, `context_usage`, `work_product_delta`, `iwe_delta` |
+| Проверить перенос и совместную способность | `tailor_outcome.human_transfer`, `tailor_outcome.joint_capability`, `evidence_refs` |
 
 ---
 
@@ -339,4 +444,4 @@ tailor_context:
 
 ---
 
-*Создан: 2026-03-30 | Верифицирован субагентом: CONDITIONAL PASS → правки внесены | WP-149 Блок А | Обновлён 2026-08-25: schema v2 для развития внутри реальной работы; добавлены разрешённый личный контекст, квалификация МИМ, шесть независимых состояний и текущий рабочий продукт без выдуманных fallback.*
+*Создан: 2026-03-30 | Верифицирован субагентом: CONDITIONAL PASS → правки внесены | WP-149 Блок А | Обновлён 2026-08-25: schema v2 для развития внутри реальной работы; добавлены разрешённый личный контекст, квалификация МИМ, шесть независимых состояний, текущий рабочий продукт и выходной объект `tailor_outcome` без выдуманных fallback.*
