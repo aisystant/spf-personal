@@ -1,6 +1,6 @@
 ---
 id: PD.FORM.105
-name_ru: «Квалификационная шкала ШСМ: 8 степеней мастерства созидателя»
+name_ru: "«Квалификационная шкала ШСМ: 8 степеней мастерства созидателя»"
 name_en: "ShSM Qualification Scale: Eight Levels of Creator Mastery"
 type: domain-entity
 subtype: formalization

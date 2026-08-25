@@ -89,7 +89,7 @@ tags: [evidence-base, habit-formation, self-regulation, skill-acquisition, flow,
 
 2. **Identity-first подход (мемы) — три независимых подтверждения:** Atomic Habits (identity-based habits), Positive Intelligence (Saboteurs = identity patterns), Kahneman (cognitive biases). Работа с мемами — обоснованный первый шаг.
 
-3. **Малые шаги (Fogg) — сильнейшая evidence base:** 1900+ публикаций. Наш переход Случайный → Практикующий (2 ч/нед) полностью согласуется с Tiny Habits.
+3. **Малые шаги (Fogg) — сильнейшая evidence base:** 1900+ публикаций. Ритмический ориентир 2 ч/нед для начала практики согласуется с Tiny Habits, но сам по себе не подтверждает переход Случайный → Практикующий. Gate 1→2 требует `recommended_stage ≥ 2` и свежий `core_cp_floor ≥ 2` по PD.FORM.089.
 
 4. **Состояния — научно обоснованы по компонентам:** сон, свет, восстановление — peer-reviewed. «Протокольный подход» (делай X — получишь Y) — упрощение. Для ЛР: состояния = первый слой диагностической карты (PD.FORM.038).
 

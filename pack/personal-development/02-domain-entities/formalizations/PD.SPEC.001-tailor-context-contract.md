@@ -64,7 +64,7 @@ tailor_context:
     evidence_ref: "<profile-consent-evidence-ref>" # str
 
   # ── Профиль (L1 declarative, самооценка) ──────────────────────────────────
-  student_stage: 1          # int 0–4. Ступень ученика (PD.FORM.003)
+  student_stage: 1          # int 1–5. Ступень ученика (PD.FORM.003)
   it_level: 1               # int 0–3. ИТ-уровень (SOP.001 §Scaffolding)
   dominant_role: "learner"  # str. Из PD.FORM.087: learner | intellectual |
                             #        professional | researcher | enlightener
@@ -110,7 +110,7 @@ tailor_context:
                             # L3 приоритетнее L1. Fallback: "development"
   energy: 4                 # int 1–5. Самооценка. Fallback: 3
   phase: 1                  # int 1–4. Вычислено из student_stage (SOP.001 Шаг 2)
-                            # 0→Ф1, 1→Ф1/Ф2, 2→Ф2/Ф3, 3→Ф3/Ф4, 4→Ф4
+                            # 1→Ф1, 2→Ф1/Ф2, 3→Ф2/Ф3, 4→Ф3/Ф4, 5→Ф4
 
   # ── Мастерство по областям (L3 derived или L1 fallback) ──────────────────
   # Текущая максимальная глубина/степень, достигнутая по каждой области.
@@ -266,7 +266,7 @@ tailor_outcome:
 
 | Поле | Условие | Fallback |
 |------|---------|---------|
-| `student_stage` | L3 не вычислен | Из L1 самооценки. Если нет → `0` (Случайный) |
+| `student_stage` | L3 не вычислен | Из L1 самооценки. Если нет → `1` (Случайный) |
 | `it_level` | Нет в профиле | `0` |
 | `dominant_role` | Нет в профиле | `"learner"` |
 | `style.format` | Нет в профиле | `"detailed"` |
@@ -286,7 +286,7 @@ tailor_outcome:
 | `state_axes.*` | Ось неизвестна или не готова к исполнимому выбору | `{state_id: null, source: null, as_of: null}`. Не подставлять legacy `state` |
 | `strategy_inputs` | Нет governance-репо | `{}` или omit — Портной работает без связки с рабочими задачами (legacy-режим). См. WP-364 Развилка 1 |
 
-**Правило для нового пользователя (student_stage = 0, пустая история):**
+**Правило для нового пользователя (student_stage = 1, пустая история):**
 Портной получает `tailor_context` с максимальным fallback-набором: все области = 0,
 `worldview_gaps = []`, `mastery_gaps = []`. При пустых gaps Портной (SOP.001 Шаг 4b)
 выбирает из каталогов по фазе напрямую — все элементы фазы 1 имеют `current_depth = 0`,
@@ -305,7 +305,7 @@ tailor_outcome:
 
 ```yaml
 tailor_context:
-  student_stage: 0
+  student_stage: 1
   it_level: 0
   dominant_role: "learner"
   style: {format: "detailed", duration_min: 20}
@@ -349,7 +349,7 @@ tailor_context:
 | `recent_history` | Память (Observed) | `learning.domain_event` (последние 10 событий за 7 дней — B2) | event-gateway |
 | `worldview_gaps` | Память.Derived | `indicators.calculated_profile.worldview_gaps` | projection-worker (WP-151) |
 | `mastery_gaps` | Память.Derived | `indicators.calculated_profile.mastery_gaps` | projection-worker (WP-151) |
-| `rcs_profile` | Память.Derived | `indicators.calculated_profile.rcs_current` (7 слотов FORM.089) | projection-worker (WP-151 Ф12) |
+| `rcs_profile` | Память.Derived | Нормативно: 7 `bh.*`-характеристик + 13 `cp.*`-срезов FORM.089. Текущий `indicators.calculated_profile.rcs_current` может хранить legacy 7-slot форму до миграции; такую запись нельзя интерпретировать как новый профиль или использовать для gate 4→5 | projection-worker (WP-151 Ф12) |
 | `domain` | Персона | declarative profile | Онбождинг / настройки |
 | `personal_inputs.goals` | Персона | Разрешённые декларации целей | Пользователь или агент по поручению с явным принятием |
 | `personal_inputs.dissatisfactions` | Персона | Разрешённые декларации неудовлетворённостей | Пользователь или агент по поручению с явным принятием |

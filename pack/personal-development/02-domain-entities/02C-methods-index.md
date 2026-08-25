@@ -36,7 +36,8 @@ Methods that determine priorities and resource allocation.
 | [PD.METHOD.008](../03-methods/PD.METHOD.008-strategizing.md) | Strategizing | [WP.005](../04-work-products/PD.WP.005-dissatisfaction-list.md), [WP.006](../04-work-products/PD.WP.006-strategy.md), [WP.007](../04-work-products/PD.WP.007-priority-projects-list.md) | active | current |
 | [PD.METHOD.017](../03-methods/PD.METHOD.017-wp-selection.md) | Work Product Selection | [WP.007](../04-work-products/PD.WP.007-priority-projects-list.md) | active | current |
 | [PD.METHOD.009](../03-methods/PD.METHOD.009-planning.md) | Planning | [WP.001](../04-work-products/PD.WP.001-time-budget.md), [WP.014](../04-work-products/PD.WP.014-daily-routine.md), [WP.015](../04-work-products/PD.WP.015-task-list.md) | active | current |
-| [PD.METHOD.018](../03-methods/PD.METHOD.018-lifework-pack-composition.md) | Lifework Pack Composition | 6 lifework templates (uровни 1-6 охвата) | active | current |
+| [PD.METHOD.018](../03-methods/PD.METHOD.018-lifework-pack-composition.md) | Lifework Pack Composition | 6 Lifework-документов по существующим шаблонам (без отдельных PD.WP-ID) | active | hypothesis |
+| [PD.METHOD.025](../03-methods/PD.METHOD.025-planning-cascade.md) | Learner Planning Cascade | [WP.001](../04-work-products/PD.WP.001-time-budget.md), [WP.020](../04-work-products/PD.WP.020-horizon-documents.md) | active | current |
 
 ### Learning Methods
 
@@ -45,7 +46,7 @@ Methods that structure the learning process.
 | ID | Method Name | Produces | Status | SoTA |
 |----|-------------|----------|--------|------|
 | [PD.METHOD.002](../03-methods/PD.METHOD.002-learner-method.md) | Learner Method | [WP.002](../04-work-products/PD.WP.002-learner-works.md) | active | current |
-| [PD.METHOD.015](../03-methods/PD.METHOD.015-first-development-slot.md) | First Development Slot | [WP.014](../04-work-products/PD.WP.014-daily-routine.md) | active | current |
+| [PD.METHOD.015](../03-methods/PD.METHOD.015-first-development-slot.md) | First Development Slot | [WP.010](../04-work-products/PD.WP.010-fleeting-notes.md) + применённый след в рабочем продукте живого проекта | active | hypothesis |
 
 ### Reflective Methods
 
@@ -81,9 +82,9 @@ Methods for calibrated measurement and pedagogical content authoring.
 
 | ID | Method Name | Produces | Status | SoTA |
 |----|-------------|----------|--------|------|
-| [PD.METHOD.030](../03-methods/PD.METHOD.030-anchored-quality-scale.md) | Anchored Quality Scale (Шкала качества с якорями) | calibrated q:N rating | active | current |
-| [PD.METHOD.031](../03-methods/PD.METHOD.031-form-slices-node-tree.md) | FORM Slices + Node Tree | structure of creator development model | draft | current |
-| [PD.METHOD.032](../03-methods/PD.METHOD.032-guide-section-template-v4.md) | Guide Subsection Template v4 | guide subsection with frontmatter anchors | active | current |
+| [PD.METHOD.030](../03-methods/PD.METHOD.030-anchored-quality-scale.md) | Anchored Quality Scale (Шкала качества с якорями) | [WP.017](../04-work-products/PD.WP.017-learner-diagnostic-map.md) | active | current |
+| [PD.METHOD.031](../03-methods/PD.METHOD.031-form-slices-node-tree.md) | Node Tree + bh/cp Views | [WP.017](../04-work-products/PD.WP.017-learner-diagnostic-map.md) | draft | hypothesis |
+| [PD.METHOD.032](../03-methods/PD.METHOD.032-guide-section-template-v4.md) | Guide Subsection Template v4 | [WP.002](../04-work-products/PD.WP.002-learner-works.md) | active | current |
 | [PD.METHOD.033](../03-methods/PD.METHOD.033-meme-removal-entry-point.md) | Meme Removal as Pedagogical Entry Point | unblocking opening before counterintuitive concept | active | current |
 
 ### Intellectual Mastery Methods (РР, ст. Работник→Специалист ШСМ)
@@ -115,7 +116,7 @@ Methods of thinking mastery for the Intellectual role. Applied in the Worker Dev
 | [PD.METHOD.010](../03-methods/PD.METHOD.010-daily-reflective-review.md) | Daily Reflective Role-Product Review | Reflective | — | current |
 | [PD.METHOD.001](../03-methods/PD.METHOD.001-time-accounting.md) | Time Accounting | Registration | [WP.001](../04-work-products/PD.WP.001-time-budget.md) | current |
 | [PD.METHOD.012](../03-methods/PD.METHOD.012-day-rhythm.md) | Day Rhythm (OWC Fractal) | Reflective | [WP.014](../04-work-products/PD.WP.014-daily-routine.md) | current |
-| [PD.METHOD.015](../03-methods/PD.METHOD.015-first-development-slot.md) | First Development Slot | Learning | [WP.014](../04-work-products/PD.WP.014-daily-routine.md) | current |
+| [PD.METHOD.015](../03-methods/PD.METHOD.015-first-development-slot.md) | First Development Slot | Learning | [WP.010](../04-work-products/PD.WP.010-fleeting-notes.md) + применённый след живого проекта | hypothesis |
 | [PD.METHOD.016](../03-methods/PD.METHOD.016-self-diagnostics.md) | Self-Diagnostics | Reflective | [WP.017](../04-work-products/PD.WP.017-learner-diagnostic-map.md) | current |
 
 ---

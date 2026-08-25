@@ -116,15 +116,15 @@ Core conceptual distinctions for the Personal Development domain.
 | [D.145](#d145-universal-guide-vs-personal-guide) | Universal Guide vs. Personal Guide (Универсальное руководство ≠ Персональное руководство) | current | WP-300 |
 | [D.146](#d146-domain-activity-vs-marker-event) | Domain Activity vs. Marker Event (Признак практики = активность в домене ≠ маркерное событие) | current | FORM.089, WP-214 |
 | [D.147](#d147-four-natures-of-personal-ai) | Four Natures of Personal AI (Инструмент ≠ Партнёр ≠ Память ≠ Зеркало) | current | DP.D.046, WP-167 |
-| [D.148](#d148-worldview-maturity-vs-worldview) | Worldview Maturity ≠ Worldview (Зрелость мировоззрения ≠ Мировоззрение — слот W измеряет степень, не наличие) | current | FORM.089, FORM.097 |
-| [D.149](#d149-exocortex-vs-iwe-orz) | Exocortex ≠ IWE/ОРЗ (именование слота M2 — родовое понятие vs конкретные инструменты) | current | FORM.089, DP.D.046 |
+| [D.148](#d148-worldview-maturity-vs-worldview) | Worldview Maturity ≠ Worldview (срез cp.wld измеряет зрелость, не наличие мировоззрения) | current | FORM.089, FORM.097 |
+| [D.149](#d149-exocortex-vs-iwe-orz) | Exocortex ≠ IWE Operation (cp.exo и cp.iwe — разные информационные срезы) | current | FORM.089, DP.D.046 |
 | [D.150](#d150-lr-focus-vs-out-of-scope) | LR Focus vs. Out-of-Scope (Фокус программы ЛР на четырёх узлах — остальное явно вне фокуса) | current | FORM.080, D.118, D.154 |
-| [D.151](#d151-slice-vs-slot) | Slice ≠ Slot (Срез = диагностический инструмент на момент ≠ слот = постоянная характеристика в структуре) | current | FORM.089, D.152 |
-| [D.152](#d152-node-axis-slice-characteristic) | Node / Axis / Slice / Characteristic (Четыре разных вопроса о модели развития Созидателя) | current | FORM.089, D.140 |
-| [D.153](#d153-agency-as-gate-vs-developmental-node) | Agency as Gate ≠ Developmental Node (Agency = поведенческий gate перехода ≠ самостоятельный узел развития) | current | FORM.089, CHR.001 |
+| [D.151](#d151-slice-vs-slot) | Slice ≠ Legacy/Curricular Slot (cp-срез текущего RCS ≠ W/M1–M4 как учебный ярлык) | current | FORM.089, D.152 |
+| [D.152](#d152-node-axis-slice-characteristic) | Node / Axis / bh-Characteristic / cp-Slice / Graduate Characteristic | current | FORM.089, D.140 |
+| [D.153](#d153-agency-as-gate-vs-developmental-node) | Agency as Gate ≠ Developmental Node (Agency = условие специального gate 4→5 ≠ самостоятельный узел развития) | current | FORM.089, FORM.093, CHR.001 |
 | [D.154](#d154-iwe-operation-vs-iwe-creation) | IWE Operation ≠ IWE Creation (Мастерство управления IWE ≠ мастерство создания IWE — два разных узла) | current | FORM.089, D.142 |
 | [D.155](#d155-four-states-creator) | Four States of Creator: Chaos / Dead-End / Pivot / Development (Четыре состояния созидателя + мета-принцип «диагностика предшествует действию») | current | D.134, FORM.078 |
-| [D.156](#d156-stage-as-behavior-mode) | Stage = Behavior Mode (4 indicators) ≠ Self-Assessment (Ступень = режим поведения по 4 индикаторам, не самооценка) | current | FORM.089, MIM.R.009 |
+| [D.156](#d156-stage-as-behavior-mode) | Stage = Verified Profile ≠ Self-Assessment (ступень = композиция bh + cp, а для ст.5 ещё FORM.093) | current | FORM.089, MIM.R.009 |
 | [D.157](#d157-systemic-self-development-project-vs-course) | Systemic Self-Development Project ≠ Course with Deadline (Бесконечный цикл vs разовая задача) | current | METHOD.008, MIM.R.007 |
 | [D.158](#d158-conceptualization-vs-memorization) | Thinking as Modeling ≠ Memorization (Мышление как моделирование ≠ запоминание определений) | current | FORM.102, FAIL.070, METHOD.035 |
 | [D.159](#d159-material-object-vs-description) | Material Object ≠ Description (4D-ontology) (Материальный объект ≠ Описание — фундамент 4D-онтологии) | current | D.005, D.160, METHOD.035 |
@@ -133,9 +133,9 @@ Core conceptual distinctions for the Personal Development domain.
 | [D.162](#d162-qualification-vs-role) | Квалификация ≠ Роль созидателя (Порядковая ступень мастерства ≠ функциональная позиция) | current | FORM.087, FORM.105 (new) |
 | [D.163](#d163-culture-as-access-vs-mastery-as-result) | Культура (допуск) ≠ Мастерство (результат) — базовые практики vs владение методами | current | FORM.001 §3, FAIL.071 (new) |
 | [D.164](#d164-stage-of-learner-vs-qualification-level) | Ступень зрелости Ученика ≠ Степень квалификации — две оси: внутренняя зрелость роли vs внешнее признание мастерства | current | FORM.003, FORM.105, FORM.106 |
-| [D.165](#d165-informational-vs-mandatory-indicator) | Informational ≠ Mandatory Indicator (Рекомендательный индикатор не блокирует gate; стержневой входит в `min()`) | current | FORM.089 §5.2-§5.4 |
+| [D.165](#d165-informational-vs-mandatory-indicator) | Informational ≠ Mandatory Indicator (рекомендательный не блокирует gate; core-срезы образуют `core_cp_floor`, а cp.agt проверяется отдельно для 4→5) | current | FORM.089 §5.2-§5.4 |
 | [D.166](#d166-narrative-vs-operational-stage) | Narrative-stage ≠ Operational-mastery-stage (имя operational-оси выводится из narrative-носителя) | current | FORM.089 §6.3, D.154 |
-| [D.167](#d167-two-gate-vs-three-gate-graduation) | Two-Gate vs Three-Gate Graduation Model (Двойной gate Д→П vs Тройной gate П→М: метрики+мировоззрение vs метрики+шедевр+резидентура) | current | FORM.080 §7.1, FORM.109, MIM.WP.002 |
+| [D.167](#d167-two-gate-vs-three-gate-graduation) | Special Triple Gate LR 4→5 ≠ Double Gate RR Master (RCS+профиль+изменение ≠ метрики+защита) | current | FORM.089 §5.2, FORM.093 §7, FORM.109 §4 |
 | [D.168](#d168-prompt-vs-thought) | Промпт ≠ Мысль (Промпт — внешняя форма мысли как артефакт; Мысль — умение задавать вопрос, декомпозировать, удерживать контекст) | current | PD.CHR.011, PD.CHR.012, DP.D.046 |
 | [D.169](#d169-easy-life-trap-vs-genuine-fatigue) | Ловушка «жизни полегче» ≠ Реальное переутомление | current | D.148, DP.D.046 |
 | [D.170](#d170-forecast-vs-plan-vs-goal) | Прогноз ≠ план ≠ цель | current | D.171 |
@@ -3953,18 +3953,18 @@ This is a **modular** distinction (FPF A.7: by carrier — what carries the agen
 **Why It Matters:**
 1. **Разные слои лечения.** Проблема «нет регулярности» может быть: (а) не освоен M002 метод ученика → лечить методом; (б) нет ОРЗ в рабочем процессе → лечить культурой. Путать — значит чинить не тот слой.
 2. **Разная логика освоения.** Методы осваиваются последовательно (один на глубину за раз, по bottleneck). Элементы культуры встраиваются в существующую работу — не добавляются поверх, а меняют способ делать.
-3. **Полнота картины мастерства.** Ступень 4 «Дисциплинированный» требует оба слоя: и освоенные методы (M1-слот RCS), и устойчивую культуру работы (IWE как среда). Один без другого не даёт мастерства.
+3. **Полнота программы.** ЛР развивает и методы саморазвития, и способность работать с IWE, но эти учебные линии не превращаются в два обязательных поля RCS. Ступень 4 подтверждается двойным gate FORM.089; `cp.iwe` остаётся информационным срезом для рекомендаций.
 
 **Analogy:** Футболист и игра. Методы саморазвития = тренировки (бег, техника удара, физподготовка) — развивают игрока. 14 элементов = тактика и правила игры — определяют, как игрок действует на поле. Можно отлично тренироваться, но играть хаотично. И наоборот.
 
 **Related Items:**
 - Methods: [PD.METHOD.001–008](../03-methods/) — восемь методов саморазвития (M001–M008)
 - Formalization: [PD.FORM.082](../02-domain-entities/formalizations/PD.FORM.082-three-lifestyle-contexts.md) — три контекста жизни; Работа (контекст 2) связана с 14 элементами культуры (DP.M.008)
-- Formalization: [PD.FORM.080](../02-domain-entities/formalizations/PD.FORM.080-stage-direction-normative-matrix.md) — матрица ступеней; M1-слот = методы саморазвития, M2-слот = инструмент (культура работы IWE)
+- Formalization: [PD.FORM.080](../02-domain-entities/formalizations/PD.FORM.080-stage-direction-normative-matrix.md) — матрица ступеней и учебных линий; M1/M2 здесь являются рубриками содержания, не полями RCS
 
 **SoTA:** `current`
-- Basis: структура программы ЛР (M1/M2 слоты RCS FORM.089); различение «мастерство развития себя vs мастерство работы»; FPF Object ≠ Description ≠ Carrier применительно к уровням развития
-- Revision criterion: Would change if the program structure merges M1 and work-culture tracking into a single slot, or if empirical data shows the distinction does not predict different remediation paths
+- Basis: структура учебных направлений FORM.094; различение «мастерство развития себя vs мастерство работы»; FPF Object ≠ Description ≠ Carrier
+- Revision criterion: Would change if the program structure merges self-development practice and work-culture interventions, or if empirical data shows the distinction does not predict different remediation paths
 
 ## [D.143] Unified Style vs. Fragmented Style {#d143-unified-style-vs-fragmented-style}
 
@@ -4004,9 +4004,9 @@ This is a **modular** distinction (FPF A.7: by carrier — what carries the agen
 **Definition**: Both **universal guide** (docs) and **personal guide** (personal-guide) are projections from PACK-personal-development (SoT). They differ in personalization layer.
 
 - **Universal guide** (docs): method for everyone, no specific pilot binding, no RCS.
-- **Personal guide** (personal-guide): projection under specific pilot through RCS (stage, bottleneck, domain).
+- **Personal guide** (personal-guide): projection under specific pilot through current RCS (`current_stage`, `bottleneck_slice` and, when relevant, `stage5_transition_blocker`). Project domain and Person context are joined separately; supporting `cp.knw` and `cp.traj` may inform recommendations but are not a domain field or a hard gate.
 
-**Distinction Test**: Does the artifact use RCS-data (stage 1-5, bottleneck slot, domain) to filter/select content? → Personal. Generic method without RCS → Universal.
+**Distinction Test**: Does the artifact use current RCS data (`current_stage`, `bottleneck_slice`, optional `stage5_transition_blocker`) together with separately obtained project and Person context to filter or select content? → Personal. Generic method without personal context → Universal.
 
 **Anti-pattern**: editing personal guide based on universal and vice versa. Both derive from Pack, not from each other. Single SoT: PACK-personal-development.
 
@@ -4017,16 +4017,16 @@ This is a **modular** distinction (FPF A.7: by carrier — what carries the agen
 
 ## [D.146] Domain Activity vs. Marker Event {#d146-domain-activity-vs-marker-event}
 
-**Definition**: A **day of practice** is detected by activity in the relevant domain (`activity_domain IN ('practice','learning')`), NOT by occurrence of ritual marker events (`day_close`, `day_plan_closed`).
+**Definition**: A **day of practice** is detected by confirmed activity in the relevant domain (`activity_domain IN ('practice','learning')`), NOT by occurrence of ritual marker events. `RITUAL_MARKER_EVENT_TYPES = {day_plan_opened, day_open, day_plan_closed, day_close, week_plan_closed, month_plan_closed}` is explicitly excluded even if a producer assigned one of those events a learning-domain label.
 
-**Distinction Test**: For streak/M1 baseline computation — does the criterion require a ritual marker, or any activity in the domain? Marker-only → restrictive (under-counts true practice days). Domain-activity → permissive but accurate.
+**Distinction Test**: Для расчёта `bh.sys`/`bh.stb` — требует ли критерий ритуального маркера или учитывает подтверждённую активность в домене? Marker-only → занижает реальные дни практики. Domain-activity → считает практику, даже если ритуал закрытия пропущен.
 
-**Concrete bug fixed (WP-214 Ф10.5, 2026-05-11)**: Filter by `event_type IN ('day_close', 'day_plan_closed')` gave M1=1 for a user who had 4 actual practice days. Marker events are rare (4 events in 60 days), but practice activity in the domain spans many more days. Switched to `COUNT(DISTINCT DATE) WHERE activity_domain IN ('practice','learning')` → correct M1=4.
+**Concrete bug fixed (WP-214 Ф10.5, 2026-05-11)**: фильтр `event_type IN ('day_close', 'day_plan_closed')` дал индекс систематичности 1 при четырёх реальных днях практики. Переход на `COUNT(DISTINCT DATE) WHERE activity_domain IN ('practice','learning')` восстановил корректный поведенческий сигнал; в текущей схеме это источник для `bh.sys`/`bh.stb`, не значение `cp.*`.
 
-**Generalization**: For any streak-type metric (consecutive days, weekly cadence) the presence criterion must be **domain activity**, not ritual completion. Markers signal intent/closure, not the act of practice.
+**Generalization**: For any streak-type metric (consecutive days, weekly cadence) the presence criterion must be **domain activity**, not ritual completion. A day is counted once by calendar date when at least one non-marker event has the required `activity_domain`. Markers signal intent/closure, not the act of practice. This is the same event boundary used by PD.FORM.095: an artifact or other observation first becomes a classified domain event, and only then may feed `bh.sys`/`bh.stb`.
 
 **Related Items**:
-- Formalization: [PD.FORM.089](../02-domain-entities/formalizations/PD.FORM.089-learner-rcs.md) §M1 baseline (rule operationalised here)
+- Formalization: [PD.FORM.089](../02-domain-entities/formalizations/PD.FORM.089-learner-rcs.md) §12 `bh.sys` и `bh.stb`
 - WP-214 Ф10.5 (fix and handoff)
 
 ## [D.147] Four Natures of Personal AI {#d147-four-natures-of-personal-ai}
@@ -4058,7 +4058,7 @@ This is a **modular** distinction (FPF A.7: by carrier — what carries the agen
 
 ## [D.148] Зрелость мировоззрения ≠ Мировоззрение {#d148-worldview-maturity-vs-worldview}
 
-**Distinction**: Слот W RCS называется «Зрелость мировоззрения», а не «Мировоззрение» — потому что измеряется не наличие мировоззрения (оно есть у каждого), а степень его зрелости: формализованность, проверяемость на реальных кейсах, устойчивость к рассогласованиям.
+**Distinction**: диагностический срез `cp.wld` оценивает зрелость мировоззрения, а не наличие мировоззрения. Мировоззрение есть у каждого; различаются его формализованность, проверяемость на реальных кейсах и устойчивость к рассогласованиям.
 
 | | Мировоззрение | Зрелость мировоззрения |
 |--|--|--|
@@ -4070,26 +4070,26 @@ This is a **modular** distinction (FPF A.7: by carrier — what carries the agen
 **Test**: «Можно ли проверить рассогласование этого взгляда на конкретном кейсе?» Нет → мнение, не зрелое мировоззрение.
 
 **Related Items**:
-- Slot W definition: [PD.FORM.089](../02-domain-entities/formalizations/PD.FORM.089-learner-rcs.md) §4 W
+- Slice `cp.wld`: [PD.FORM.089](../02-domain-entities/formalizations/PD.FORM.089-learner-rcs.md) §4
 - Distinction: distinctions.md (авторские) — «Мировоззрение ≠ Мнение» (D.FORM.097)
 - Source: WP-310 Ф-А (2026-05-15)
 
-## [D.149] Экзокортекс ≠ IWE/ОРЗ (именование слота M2) {#d149-exocortex-vs-iwe-orz}
+## [D.149] Экзокортекс ≠ управление IWE {#d149-exocortex-vs-iwe-orz}
 
-**Distinction**: Слот M2 RCS называется «Экзокортекс», а не «IWE/ОРЗ» — потому что слот описывает родовую концепцию (продолжение когнитивной системы), а не конкретные инструменты.
+**Distinction**: текущий RCS разделяет два информационных среза. `cp.exo` оценивает, использует ли человек внешнюю когнитивную систему как усилитель мышления; `cp.iwe` оценивает операционное управление конкретной средой IWE и её протоколами.
 
-| | IWE/ОРЗ | Экзокортекс |
+| | Управление IWE — `cp.iwe` | Экзокортекс — `cp.exo` |
 |--|--|--|
-| **Тип** | Имена конкретных инструментов | Родовое понятие (cognitive extension) |
-| **Стабильность** | Меняется при смене инструментов | Остаётся при любых инструментах |
-| **Слот M2** | Нет — привязывает к текущей реализации | Да — описывает суть измерения |
+| **Вопрос** | Насколько уверенно человек управляет репозиториями, ритуалами и инструментами IWE? | Насколько внешняя система действительно расширяет мышление, а не заменяет его? |
+| **Зависимость от реализации** | Меняется при смене среды и протоколов | Сохраняет родовой смысл при смене инструмента |
+| **Статус в ступени** | Информационный срез | Информационный срез |
 
-**Test**: «Если IWE заменить другим инструментом экзокортекса — изменится ли смысл слота M2?» Нет → слот описывает «Экзокортекс», не «IWE».
+**Test**: «Человек умеет запускать протоколы, но может ли объяснить и воспроизвести мыслительный ход без ответа модели?» Первое свидетельствует о `cp.iwe`, второе различает зрелый `cp.exo`.
 
 **Related Items**:
-- Slot M2 definition: [PD.FORM.089](../02-domain-entities/formalizations/PD.FORM.089-learner-rcs.md) §4 M2
+- Slices `cp.iwe` и `cp.exo`: [PD.FORM.089](../02-domain-entities/formalizations/PD.FORM.089-learner-rcs.md) §§2, 4
 - Concept: DP.D.046 «Экзоскелет ≠ Автопилот» (digital-platform)
-- Source: WP-310 Ф-А (2026-05-15)
+- Source: WP-310 Ф-А (2026-05-15), миграция RCS v5.0.1 (2026-08-25)
 
 ## [D.150] LR Focus vs. Out-of-Scope (Four Nodes) {#d150-lr-focus-vs-out-of-scope}
 
@@ -4119,82 +4119,74 @@ This is a **modular** distinction (FPF A.7: by carrier — what carries the agen
 - Distinction: [D.118](#d118-intellect-vs-applied-mastery-mode)
 - Source: WP-310 Ф-З (2026-05-15), DS-my-strategy commit 0ff66bc9
 
-## [D.151] Slice ≠ Slot (Срез vs Слот в контексте руководства) {#d151-slice-vs-slot}
+## [D.151] Slice ≠ Legacy/Curricular Slot {#d151-slice-vs-slot}
 
-**Definition**: В контексте персонального руководства и диагностики — «срез» (slice) и «слот» (slot) — разные понятия:
+**Definition**: `cp.*` в текущем RCS — тип диагностического среза с рубрикой, датой и уверенностью. «Слот W/M1–M4/IT/A» — термин прежней схемы; в FORM.094 M1–M4 допустимы только как учебные рубрики содержания. Датированная запись `cp.rhy = 3` — результат измерения среза, а не новый «слот».
 
-- **Слот (Slot)** — постоянная характеристика в структуре модели (cp.rhy, cp.wld, cp.skl, cp.iwe, cp.int, cp.agt): именованное место, которое всегда присутствует в профиле
-- **Срез (Slice)** — диагностический инструмент, сделанный в конкретный момент: снимок значения слота в точке времени. Срез устаревает; слот остаётся.
+| | Cp-срез | Legacy/учебный слот |
+|--|---------|----------------------|
+| **Назначение** | Проверить потенциал по рубрике | Сгруппировать содержание либо описать прежнюю схему |
+| **Пример** | `cp.rhy`, `cp.wld`, `cp.skl` | W, M1, M2, M3, M4, IT, A |
+| **В формуле ступени** | Стержневые `cp.*` участвуют по FORM.089 | Не участвует |
+| **В руководстве** | `cp_checks: [cp.rhy]` с актуальным значением из assessment | M1–M4 могут быть рубриками разделов |
 
-| | Слот | Срез |
-|--|------|------|
-| **Существование** | Постоянное — часть структуры профиля | Временное — снимок момента |
-| **Пример** | cp.rhy — слот «систематичность» | cp.rhy = 3 (2026-05-15) — срез в этот день |
-| **Устаревает?** | Нет — структура стабильна | Да — следующий срез может дать другое значение |
-| **В руководстве** | frontmatter `cp_check: cp.rhy` | конкретное значение в assessment |
+**Distinction Test**: «Есть ли у кода нормативная рубрика `cp.*` в FORM.089?» Да → текущий диагностический срез. «Это W/M1–M4 для выбора темы?» → учебный ярлык, не поле RCS.
 
-**Distinction Test**: «Изменится ли это при следующей диагностике?» Нет → слот (структура). Да → срез (снимок).
-
-**Why It Matters**: при проектировании подразделов руководства frontmatter содержит `cp_check` (ссылку на слот), а не конкретное значение (срез). Смешение → руководство привязывается к конкретной диагностике вместо структуры.
+**Why It Matters**: смешение создаёт две несовместимые формулы ступени и позволяет потребителю обходить актуальные `bh.*`/`cp.*`.
 
 **Related Items**:
-- Method: [PD.METHOD.032](../03-methods/PD.METHOD.032-guide-section-template-v4.md) — frontmatter-якоря используют слоты, не срезы
+- Method: [PD.METHOD.032](../03-methods/PD.METHOD.032-guide-section-template-v4.md) — frontmatter-якоря ссылаются на `cp.*`
 - Formalization: [PD.FORM.089](../02-domain-entities/formalizations/PD.FORM.089-learner-rcs.md)
-- Distinction: [D.152](#d152-node-axis-slice-characteristic) — четыре роли концептов в модели
+- Distinction: [D.152](#d152-node-axis-slice-characteristic)
 
-## [D.152] Node / Axis / Slice / Characteristic (Четыре разных взгляда) {#d152-node-axis-slice-characteristic}
+## [D.152] Node / Axis / bh-Characteristic / cp-Slice / Graduate Characteristic {#d152-node-axis-slice-characteristic}
 
-**Definition**: Четыре разных вопроса о модели развития Созидателя, каждый отвечается своим понятием:
-- **Node (Узел)** — *что* развивается (компонент модели Созидателя: мастерство, мировоззрение, IWE, …)
-- **Axis (Ось)** — *по какой шкале* измеряется развитие (систематичность, зрелость мировоззрения, ритм)
-- **Slice (Срез)** — диагностический инструмент для конкретной оси на конкретном узле в конкретный момент
-- **Characteristic of a graduate (Характеристика выпускника)** — наблюдаемая черта *после* прохождения ступени
+**Definition**: Пять разных вопросов модели развития требуют пяти понятий:
 
-**Distinction Test**:
-- При вопросе «является ли X Y?» — уточнить, на какой из четырёх вопросов X отвечает: «что развивается / по какой шкале / как измеряем / каков результат».
-- Один объект может играть несколько ролей (например, W выступает и как срез, и как характеристика), но роли — не синонимы.
+| Вопрос | Понятие | Пример |
+|--------|---------|--------|
+| Что развивается? | Узел | Мастерство саморазвития |
+| В каком направлении растёт? | Ось | Мировоззрение / Мастерство |
+| Что автоматически наблюдается во времени? | `bh`-характеристика | `bh.sys`, `bh.inv` |
+| Что Диагност оценивает по рубрике сейчас? | `cp`-срез | `cp.rhy`, `cp.wld` |
+| Какое свойство должно проявиться у Проактивного? | Характеристика профиля | ясность, агентность, способность производить |
 
-| Вопрос | Понятие |
-|--------|---------|
-| Что развивается? | Узел |
-| По какой шкале? | Ось |
-| Как измеряется (сейчас)? | Срез |
-| Каков наблюдаемый результат ступени? | Характеристика выпускника |
+**Distinction Test**: спросить, объект является частью системы, направлением роста, автоматическим рядом событий, диагностической оценкой или нормативным результатом. Один факт может быть свидетельством для нескольких представлений, но не превращает их друг в друга.
 
-**Typical Confusion**: трактовать «срез» (W, M1…) как синоним «узла» — теряется различение между *что развивается* и *как измеряется*; или трактовать Agency как узел, когда это gate-характеристика.
+**Typical Confusion**: считать коммит значением `cp.*`, объявлять `cp.agt` узлом или возвращать W/M1–M4 в FORM.089 как поля.
 
-**Why It Matters**: одна и та же буква (W, M1, …) выполняет разные роли в FORM.089. Без 4-стороннего различения модель схлопывается до «список букв» и теряет диагностическую точность.
+**Why It Matters**: разделение удерживает независимость Аттестатора и Диагноста и не смешивает программу воздействия с измерением результата.
 
 **Related Items**:
 - Form: [PD.FORM.089](../02-domain-entities/formalizations/PD.FORM.089-learner-rcs.md) §1
 - Distinctions: [D.139](#d139-system-vs-characteristic), [D.140](#d140-characteristic-vs-measure-vs-value-vs-potential), [D.141](#d141-system-vs-role)
 - SoTA: `current` — formalized 2026-05-15 (commit a52da23)
-- Revision criterion: изменится, если четыре вопроса окажутся сводимыми к меньшему числу (например, ось и срез всегда совпадают).
+- Revision criterion: изменится, если два из пяти вопросов окажутся операционально неразличимыми без потери воспроизводимости.
 
 ## [D.153] Agency как Gate (условие перехода) ≠ Developmental Node {#d153-agency-as-gate-vs-developmental-node}
 
-**Definition**: **Agency** в модели Созидателя — *конъюнктивный gate* для переходов ступеней, а **не** самостоятельный узел развития. Конкретно: переход Дисциплинированный→Проактивный требует `W ≥ 4 AND A ≥ 4 AND stage_raw ≥ 4` — A (агентность) входит как один из трёх конъюнктов, не как самостоятельная цель обучения.
+**Definition**: **Agency** в модели Созидателя — условие специального перехода 4→5, а не самостоятельный узел развития. В составном RCS-gate агентность представлена свежим срезом `cp.agt ≥ 4`; в метрическом gate PD.FORM.093 — обязательной характеристикой `agency_idx ≥ 4`. Полный переход подтверждается только конъюнкцией: свежий RCS-gate `bh + cp` (четыре стержневых cp-среза и `cp.agt`) AND свежий метрический профиль пяти обязательных характеристик AND свежее подтверждённое изменение охвата ≥2. Прежнее упрощение до трёх скалярных величин больше не применяется.
 
 **Distinction Test**:
-- Можно ли обучать этому отдельно, через специальный метод? (Да → узел; Нет → gate)
-- Мастерство (M1) — да, обучается конкретным методом. Мировоззрение (W) — да, тренируется рефлексией. Agency — нет, проявляется *через* узлы (поведенческие следы в M1-M4 событиях).
+- Можно ли обучать этому отдельно, через специальный метод? (Да → вероятный узел.) Если признак только измеряет проявление результатов других узлов и блокирует конкретный переход, это gate, а не узел.
+- Мастерство саморазвития и мыслительное мастерство развиваются методами. Agency не является отдельным узлом: она проявляется в действиях и проверяется независимыми `bh.agn`, `cp.agt` и `agency_idx`.
 
 | Узел | vs. | Gate |
 |------|-----|------|
-| Имеет собственный метод развития | | Проявляется через другие узлы |
-| Обучаем в изоляции | | Измеряем только через узлы |
-| Пример: M1 (собранность), W (зрелость мировоззрения) | | Пример: Agency, конъюнктивный gate ступени |
+| Имеет собственный метод развития | | Не задаёт самостоятельного содержания обучения |
+| Обучаем в изоляции | | Измеряется через поведенческие и диагностические свидетельства |
+| Пример: мастерство саморазвития, мыслительное мастерство | | Пример: `cp.agt` и `agency_idx` как разные измерительные условия перехода 4→5 |
 
-**Typical Confusion**: включать Agency наряду с W/M1-M4/IT как «ещё один узел для развития», затем проектировать отдельный «модуль агентности». Результат — категориальная ошибка: нечего тренировать в изоляции; Agency возникает из делания.
+**Typical Confusion**: включать Agency наряду с узлами Пилота как «ещё один узел для развития», затем проектировать отдельный «модуль агентности». Результат — категориальная ошибка: агентность возникает из самостоятельного действия в реальных задачах.
 
-**Why It Matters**: последствия для UI/диагностики — Agency не показывается как срез рядом с другими; показывается как *gate-индикатор* рядом со ступенью. Последствия для программы — нет отдельного «модуля Agency»; A измеряется по поведенческим следам в событиях M1-M4.
+**Why It Matters**: интерфейс показывает `cp.agt` как transition blocker и `agency_idx` как обязательную характеристику профиля, сохраняя их разные измерительные роли. Последствия для программы — нет отдельного «модуля Agency»; агентность измеряется по поведенческим и диагностическим свидетельствам практики.
 
 **Related Items**:
 - Form: [PD.FORM.089](../02-domain-entities/formalizations/PD.FORM.089-learner-rcs.md) §1, §5.2 (тройной gate Д→П)
 - Distinction: [D.152](#d152-node-axis-slice-characteristic)
 - Characteristic: [PD.CHR.001](../02-domain-entities/characteristics/PD.CHR.001-characteristics.md) — Agency (CHR.K.001)
 - SoTA: `current` — fixed 2026-05-15 (commit a52da23)
-- Revision criterion: изменится, если найден специальный метод обучения Agency, отличный от M-методов.
+- Revision criterion: изменится, если найден воспроизводимый самостоятельный метод развития Agency, не сводимый к практике других узлов.
 
 ## [D.154] IWE Operation ≠ IWE Creation {#d154-iwe-operation-vs-iwe-creation}
 
@@ -4249,25 +4241,25 @@ This is a **modular** distinction (FPF A.7: by carrier — what carries the agen
 - Formalization: [PD.FORM.078](../02-domain-entities/formalizations/PD.FORM.078-strategic-position-playbooks.md)
 - SoTA: `current` — Basis: Fleeting-note 2026-05-15
 
-## [D.156] Ступень = режим поведения (4 индикатора) ≠ самооценка {#d156-stage-as-behavior-mode}
+## [D.156] Ступень = подтверждённый профиль ≠ самооценка {#d156-stage-as-behavior-mode}
 
-**Ступень** определяется объективными поведенческими прокси, не субъективным ощущением:
+**Ступень** определяется композицией независимых свидетельств, а не ощущением и не четырьмя выбранными прокси:
 
-| Индикатор | Прокси-переменная | Pack-привязка |
-|-----------|-------------------|---------------|
-| Защищённый слот ≥3 нед подряд | cp.rhy | PD.FORM.089 |
-| Методы на уровне «умею», не «слышал» | cp.skl | PD.FORM.089 |
-| Рабочие продукты за последние 2 нед | bh.met | PD.FORM.089 |
-| Обратная связь из среды | bh.sys | PD.FORM.089 |
+| Слой | Что даёт | Ограничение |
+|------|----------|-------------|
+| 7 характеристик `bh.*` Аттестатора | Поведенческий сигнал по событиям | Не видит глубину и не присваивает ступень один |
+| 13 срезов `cp.*` Диагноста | Свежий профиль потенциала; четыре стержневых для ст.1–4 | Не копируется из `bh.*`; требует рубрики и уверенности |
+| PD.FORM.093 для перехода 4→5 | Пять обязательных характеристик + реальное изменение | Добавляется только к полному RCS-gate ступени 5 |
 
-Применение в R28 (Диагност): 4 индикатора = объективные прокси, заменяющие самодекларацию. Смещение: намерения → инфраструктура.
+Self-report допустим как один из явно маркированных источников, но не как окончательное решение. Неполные или просроченные данные дают `indeterminate`, а не угаданную ступень.
 
-**Distinction Test**: «Как определяется ступень?» По ощущению («я чувствую себя дисциплинированным») → самооценка (ненадёжно). По 4 поведенческим прокси → режим поведения (измеримо).
+**Distinction Test**: «Можно ли воспроизвести решение из свежих `bh.*`, `cp.*` и, для ступени 5, FORM.093?» Нет → это мнение или неполная оценка. Да → подтверждённый профиль.
 
 **Related Items**:
-- Formalization: [PD.FORM.089](../02-domain-entities/formalizations/PD.FORM.089-learner-rcs.md) §6.1
-- Role: MIM.R.009 (Диагност) — использует 4 индикатора как основу диагностики
-- Source: commit 5bd37f5, §6.01 «5 ступеней развития», 2026-05-17
+- Formalization: [PD.FORM.089](../02-domain-entities/formalizations/PD.FORM.089-learner-rcs.md) §§5–6, 12
+- Formalization: [PD.FORM.093](../02-domain-entities/formalizations/PD.FORM.093-graduate-characteristics-catalog.md)
+- Role: MIM.R.009 (Диагност) — подтверждает `cp.*` и разбирает расхождения
+- Source: commit 5bd37f5; миграция RCS v5.0.1, 2026-08-25
 
 ## [D.157] Проект системного саморазвития ≠ курс с дедлайном {#d157-systemic-self-development-project-vs-course}
 
@@ -4465,14 +4457,18 @@ This is a **modular** distinction (FPF A.7: by carrier — what carries the agen
 **Definition:** В системе индикаторов прогресса (RCS, scorecard, OKR-набор) сосуществуют
 два класса:
 
-- **Mandatory (стержневой)** — входит в агрегат `min()` для `confirmed_stage`, блокирует
-  gate перехода. Просадка стержневого индикатора → блокирует ступень.
+- **Core mandatory (стержневой основной)** — входит в агрегат `core_cp_floor`, который
+  вместе с поведенческими характеристиками ограничивает `recommended_stage` для
+  переходов 1→2, 2→3 и 3→4. Просадка основного среза блокирует соответствующий gate.
+- **Special mandatory (специальный стержневой)** — не входит в `core_cp_floor`, а
+  проверяется в своём переходе. В текущей модели `cp.agt` является отдельным условием
+  только для специального тройного gate 4→5 вместе с профилем FORM.093.
 - **Informational (рекомендательный)** — виден в профиле, используется Портным/ролями
   для адаптивных рекомендаций, **но не блокирует** gate. Просадка → триггерит
   рекомендацию, не блокирует.
 
 **Distinction Test:** «Если индикатор просядет на 1 балл — это блокирует ступень/уровень?»
-- Да → mandatory.
+- Да → core mandatory или special mandatory; нужно указать конкретный gate.
 - Нет, только триггерит рекомендацию → informational.
 
 **Граница:** Один и тот же индикатор может перейти между классами при ревизии модели
@@ -4540,57 +4536,43 @@ operational-оси измеряет факт освоения; имя стади
 
 ---
 
-## [D.167] Two-Gate vs Three-Gate Graduation Model {#d167-two-gate-vs-three-gate-graduation}
+## [D.167] Special Triple Gate LR 4→5 ≠ Double Gate RR Master {#d167-two-gate-vs-three-gate-graduation}
 
-**Двойной gate (Д→П, программа ЛР):** метрики + мировоззрение.
-**Тройной gate (П→М, программа РР Мастера):** метрики + шедевр + резидентура.
+**Тройной gate ЛР 4→5:** (1) составной RCS-gate `bh + cp` со свежими четырьмя стержневыми cp-срезами и условным `cp.agt`; (2) свежий ≤8 суток метрический профиль пяти обязательных характеристик, каждая ≥4, с уверенностью не ниже medium; (3) подтверждённое изменение охвата ≥2 с уверенностью не ниже medium, причём изменение и диагностика не старше 3 месяцев.
+
+**Двойной gate выпуска РР-Мастер (PD.FORM.109 §4):** (1) `metric_gate_master`, куда уже входят предъявленный шедевр и остальные обязательные характеристики; (2) `formal_defense_gate`, куда входят завершённая резидентура и решение методсовета.
 
 ### Контекст
 
-Gate перехода между ступенями программы развития — **не одна модель**. Структура gate зависит от ступени.
+Gate перехода между ступенями программы развития — не универсальная формула. Число верхнеуровневых конъюнктов зависит от того, как конкретная программа группирует свидетельства.
 
-| Программа | Переход | Gate-модель | Оси |
-|-----------|---------|-------------|-----|
-| ЛР | Дисциплинированный → Проактивный | **Двойной** (PD.FORM.080 §7.1) | (1) метрики 10ч/нед, все методы; (2) мировоззрение — 3 признака: «мир-система», agency, осознанность ролей |
-| РР Мастера | Профессионал → Мастер | **Тройной** (PD.FORM.109) | (1) метрики (5 gate-характеристик baseline ст. 6); (2) шедевр — внешний WP `MIM.WP.002`; (3) резидентура — cohort socialization |
+| Программа | Переход | Gate-модель | Состав |
+|---|---|---|---|
+| ЛР | 4→5 (Дисциплинированный → Проактивный) | **Тройной** | RCS `bh + cp`; профиль пяти характеристик; реальное изменение охвата ≥2 |
+| РР Мастера | Профессионал → Мастер | **Двойной** | `metric_gate_master`; `formal_defense_gate` |
 
-### Тест применимости при дизайне новой программы
+### Тест различения
 
-> «Какой gate перехода между ступенями использовать — двойной или тройной?»
+Сначала назвать программу и точный переход, затем проверить состав и свежесть каждого конъюнкта. Одинаковые слова «метрики», «артефакт» или «защита» не делают gate взаимозаменяемыми: в РР шедевр уже вложен в метрическую часть, а резидентура — в формальную защиту; в ЛР изменение охвата ≥2 остаётся отдельным конъюнктом.
 
-Зависит от трёх факторов:
-1. **Внешняя видимость результата** — выше → требует внешне-наблюдаемого WP
-2. **Передача культуры** — требуется на верхних ступенях, не требуется на нижних
-3. **Частота прохождения** — Master gate проходят ~раз в жизни, Дисциплинированный — ежемесячно
+### Failure modes
 
-| Ступень | Видимость | Передача культуры | Частота | Gate |
-|---------|-----------|-------------------|---------|------|
-| Низкие (Д) | Внутренняя | Нет | Высокая | Двойной |
-| Высшие (М) | Внешняя | Да | Низкая | Тройной |
-
-### Failure modes при одно-осевом gate
-
-| Что only | Симптом |
-|----------|---------|
-| Метрический only | «Человек-марафонец», но не создал ничего значимого |
-| Шедевр only | «Один-раз-успех», нет устойчивого воспроизводства |
-| Резидентура only | «Социальная фигура без собственной работы» |
-
-### Применимо к
-
-- Дизайн программ ЛР / РР / Просветительского развития (Backlog B-002)
-- Gate-модели для ролевых траекторий
-- Дополняет дугу мировоззрения программы (PD.FORM.087) — gate-модель как **механика проверки перехода**
+| Неполная проверка | Ошибка |
+|---|---|
+| Только RCS | Ложное присвоение ступени 5 без полного переходного профиля и внешнего изменения |
+| Только профиль | Устойчивый перформанс принят за переход без подтверждённого изменения |
+| Только реальное изменение | Единичный успех принят за зрелый профиль Проактивного |
+| Перенос шедевра или резидентуры из РР в ЛР | Чужой gate создаёт избыточную блокировку программы ЛР |
 
 ### Связи
 
-- **uses:** PD.FORM.080 §7.1 (двойной gate Д→П)
-- **uses:** PD.FORM.109 (тройной gate выпускника Мастера)
-- **see_also:** MIM.WP.002 (шедевр как внешний work product)
+- **uses:** [PD.FORM.080](../02-domain-entities/formalizations/PD.FORM.080-stage-direction-normative-matrix.md) §7.1, [PD.FORM.089](../02-domain-entities/formalizations/PD.FORM.089-learner-rcs.md) §5.2 и [PD.FORM.093](../02-domain-entities/formalizations/PD.FORM.093-graduate-characteristics-catalog.md) §7 — gate ЛР 4→5
+- **uses:** [PD.FORM.109](../02-domain-entities/formalizations/PD.FORM.109-professional-graduate.md) §4 — двойной gate выпуска РР-Мастер
+- **see_also:** MIM.WP.002 (шедевр) и MIM.FMT.003 (резидентура)
 - **related_distinctions:** D.018 (Mastery Level vs Learning Stage), D.162 (Квалификация ≠ Роль)
 
-**SoTA:** `current` — FPF-derived distinction
-- Revision criterion: Would change if evidence shows that gate models cannot be differentiated by stage
+**SoTA:** `current` — синхронизировано с активными формулами PD.FORM.089/.093/.109 2026-08-25.
+- Revision criterion: изменится, если активная композиция одного из gate будет пересобрана в соответствующей формализации.
 
 
 ---
@@ -4827,9 +4809,9 @@ Gate перехода между ступенями программы разв�
 | «помоги с собой» (ЛР, мировоззрение, «зачем я») | Личностное развитие | R27 Навигатор |
 | «помоги с командой» (РР, оргструктура, рабочий хаос) | Рабочее развитие | Менеджер оргразвития |
 
-**Программа** = набор методов, обещаний, артефактов, доступный со ступени N (cp-профиль). Программа РР доступна со ступени 2+ при наличии рабочего контекста.
+**Программа** = набор методов, обещаний и артефактов с отдельным условием входа. К рабочему запросу и отдельным методам РР можно обратиться раньше, но формальное зачисление и старт программы РР доступны только после подтверждённой ступени 5 и повторной проверки готовности по PD.FORM.089 §5.2.
 
-**Маршрутизация:** триггер-фраза в запросе → role-prefix → нужная роль. Пересечение на средних ступенях (3-4) — нормально (обе роли применимы, пилот выбирает).
+**Маршрутизация:** триггер-фраза в запросе → role-prefix → нужная роль. На ступенях 3–4 обе сопровождающие роли могут быть применимы к текущей работе, но это ранняя поддержка, а не зачисление в РР. После допуска на ступени 5 пилот отдельно фиксирует старт программы.
 
 **Тест границы:** «если подопечный завтра запросит другое, какая роль возьмёт запрос — та же или другая?»
 - Другая → граница не по уровню мастерства, а по программе.
