@@ -50,7 +50,9 @@ related_wp: "WP-565"
 
 **Проблема/силы:** прогресс требует глубокой концентрации на одной работе, но контекстные переключения и реактивная среда дробят внимание.
 
-**Методы пака:** [PD.METHOD.023](../03-methods/PD.METHOD.023-flow-management.md) (управление потоком), [PD.METHOD.022](../03-methods/PD.METHOD.022-state-management.md) (управление состоянием), [PD.METHOD.015](../03-methods/PD.METHOD.015-first-development-slot.md) (первый слот развития).
+**Методы пака:** [PD.METHOD.022](../03-methods/PD.METHOD.022-state-management.md) (управление состоянием), [PD.METHOD.015](../03-methods/PD.METHOD.015-first-development-slot.md) (первый слот развития).
+
+**Формализации пака:** [PD.FORM.032](../02-domain-entities/formalizations/PD.FORM.032-flow-conditions.md) (условия потока по Чиксентмихайи: баланс сложности, концентрация, обратная связь) — точнее описывает предмет паттерна, чем «управление потоком» PD.METHOD.023 (тот про три ресурсных потока созидателя через ТОС, не про моментальную концентрацию; исключён отсюда как ложное совпадение по названию, найдено холодным ревью 08.09).
 
 **Анти-паттерны пака:** [PD.FAIL.018](../05-failure-modes/PD.FAIL.018-urgent-displaces-important.md) (срочное вытесняет важное), [PD.FAIL.042](../05-failure-modes/PD.FAIL.042-unclosed-loops-accumulation.md) (накопление незакрытых петель), [PD.FAIL.041](../05-failure-modes/PD.FAIL.041-quick-pleasure-displacement-cycle.md) (цикл вытеснения быстрым удовольствием), [PD.FAIL.058](../05-failure-modes/PD.FAIL.058-no-time-thinking-bug.md) (баг «нет времени думать»), [PD.FAIL.047](../05-failure-modes/PD.FAIL.047-pomodoro-without-conceptual-guidance.md) (помодоро без концептуального ориентира).
 
@@ -162,7 +164,7 @@ related_wp: "WP-565"
 
 **Анти-паттерны пака:** [PD.FAIL.028](../05-failure-modes/PD.FAIL.028-social-environment-dependency.md) (зависимость от социальной среды), [PD.FAIL.025](../05-failure-modes/PD.FAIL.025-indoctrination-default.md) (индоктринация по умолчанию), [PD.FAIL.012](../05-failure-modes/PD.FAIL.012-environment-driven-reading.md) (чтение, навязанное средой).
 
-**FPF-первоисточник:** `Engineering DPF Suite/HUMAN-CAPABILITY-DEVELOPMENT-PRINCIPLES-FRAMEWORK.md#hcd-7` — Arrange Providers, Access, Tools, and AI Support + `#hcd-8` — Build the Recursive Capability-Development Arrangement + `Engineering DPF Suite/MUSIC-AND-DANCE-PRACTICE-...-FRAMEWORK.md#mdpe-22` — Test a Support-Environment Change for a Practice + `#hcd-17` — Deliberately Continue and Change HCD Culture (FPF @f6ee315, 2026-09-08).
+**FPF-первоисточник:** `Engineering DPF Suite/HUMAN-CAPABILITY-DEVELOPMENT-PRINCIPLES-FRAMEWORK.md#hcd-7` — Arrange Providers, Access, Tools, and AI Support + `#hcd-8` — Build the Recursive Capability-Development Arrangement + `Engineering DPF Suite/MUSIC-AND-DANCE-PRACTICE-...-FRAMEWORK.md#mdpe-22` — Test a Support-Environment Change for a Music-or-Dance Practice (перенесено сюда как ближайший структурный аналог для среды практики за пределами музыки/танца) + `#hcd-17` — Deliberately Continue and Change HCD Culture (FPF @f6ee315, 2026-09-08).
 
 **Сигнал:** прямого уже измеряемого прод-сигнала нет — помечен «в разработке» до запроса наставника (program-binding, не блокер карты).
 
