@@ -23,7 +23,7 @@ generated: true
 | FAIL (FAIL) | 75 |
 | FORM (FORM) | 140 |
 | Methods (M) | 1 |
-| Maps (MAP) | 1 |
+| Maps (MAP) | 2 |
 | METHOD (METHOD) | 60 |
 | NAMING (NAMING) | 1 |
 | PRINC (PRINC) | 15 |
@@ -33,7 +33,7 @@ generated: true
 | SPEC (SPEC) | 1 |
 | STATE (STATE) | 8 |
 | Work Products (WP) | 28 |
-| **Total** | **369** |
+| **Total** | **370** |
 
 ## Methods
 
@@ -96,6 +96,7 @@ generated: true
 | ID | Name | Summary | Status |
 |----|------|---------|--------|
 | PD.MAP.001 | Pack Navigation Map | — | — |
+| PD.MAP.002 | Personal Development Pattern Map | Восемь стержневых паттернов ЛР (проблема/силы → принцип → методы/анти-паттерны пака → FPF-первоисточник → сигнал), собраны по итогам пир-сессии 08.09; ссылки на FPF с зафиксированным коммитом | active |
 
 ## Domain-Specific Entities
 
