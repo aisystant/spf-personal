@@ -17,4 +17,20 @@ if [ -f "$MARKER" ]; then
   fi
 fi
 
+# pack-lint's [R7] requires [pack-gate-bypass: <причина>] whenever staged diff
+# touches a critical Pack path (manifest / name-cards / SPF structure) — see
+# WP-474 Ф11. Same marker-lifecycle pattern as ROUTING_BYPASS_USED above, own
+# marker/tag: R7 sets it unconditionally on every critical touch, not behind
+# an opt-in env var, so this check is unconditional too (no ALLOW_* gate).
+PACK_GATE_MARKER="$GIT_DIR/PACK_GATE_BYPASS_USED"
+if [ -f "$PACK_GATE_MARKER" ]; then
+  rm -f "$PACK_GATE_MARKER"
+  if ! grep -qE '\[pack-gate-bypass:[[:space:]]*[^][:space:]][^][]*\]' "$MSG_FILE" 2>/dev/null; then
+    echo ""
+    echo "❌ Commit blocked: изменение затрагивает критичный путь Pack (манифест / name-cards / структура SPF)."
+    echo "   Добавь тег [pack-gate-bypass: <причина>] в сообщение коммита (причина обязательна, не пустая)."
+    exit 1
+  fi
+fi
+
 exit 0
